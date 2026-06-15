@@ -279,7 +279,6 @@ section:not(.hero) {
 .reporting,
 .software,
 .about,
-.why,
 .faq,
 .contact,
 .manifesto,
@@ -289,6 +288,10 @@ section:not(.hero) {
   margin: 0 auto;
 }
 
+.why {
+  max-width: none;
+}
+
 .support-cards,
 .why-grid,
 .faq-grid,
@@ -296,6 +299,11 @@ section:not(.hero) {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+}
+
+.why-grid {
+  max-width: 1480px;
+  margin: 0 auto;
 }
 
 .support-cards article,
@@ -1195,7 +1203,7 @@ summary {
 .why-grid article { background: rgba(255, 255, 255, 0.86); }
 
 /* 17 · Why grid: coloured top borders per card */
-.why-grid article:nth-child(1) { border-top: 4px solid var(--gold); }
+.why-grid article:nth-child(1) { border-top: 4px solid var(--sage); }
 .why-grid article:nth-child(2) { border-top: 4px solid var(--coral); }
 .why-grid article:nth-child(3) { border-top: 4px solid var(--sage); }
 
@@ -1509,7 +1517,9 @@ summary {
 }
 
 .page-cta-band h2 {
-  margin-bottom: 12px;
+  max-width: 680px;
+  margin: 0 auto 12px;
+  font-size: clamp(1.3rem, 2vw, 2rem);
 }
 
 .page-cta-band p {
@@ -1519,6 +1529,11 @@ summary {
 }
 
 .page-cta-band .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.page-cta-band .button.ghost {
+  border-color: var(--navy);
+  color: var(--navy);
+}
 
 .breadcrumb {
   font-family: Raleway, Arial, sans-serif;
